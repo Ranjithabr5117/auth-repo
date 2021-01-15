@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'myApp/parent.html'%}
+<html lang="en" dir="ltr">
+  <body>
+    {%block for_child%}
+    <div class="jumbotron">
+      <div class="container" align="center">
+        <h2 style="color:red">Thank You for takinking up the test</h2>
+        <h2>Login again</h2>
+        <a href="/accounts/login" class="btn btn-lg btn-primary">Login</a>
+          <form method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+          </form>
+        </div>
+      </div>
+    {%endblock%}
+  </body>
+</html>
